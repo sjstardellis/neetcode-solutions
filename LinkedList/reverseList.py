@@ -16,7 +16,7 @@ class Solution:
         # while current node is not null
         while curr:
             # save the next node for future reference
-            temp = curr.next
+            nextNode = curr.next
 
             # set the next node as the previous to flip the pointer (first iteration will set the next pointer to null)
             curr.next = prev
@@ -25,7 +25,7 @@ class Solution:
             prev = curr
 
             # set the current node as the next node, restarting the process until we hit null
-            curr = temp
+            curr = nextNode
 
         # returns the head of the new reversed list, in this case which is prev
         return prev
