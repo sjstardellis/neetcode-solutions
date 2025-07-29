@@ -22,8 +22,8 @@ class Solution:
                     # row // 3, col // 3 helps identify which square the slot is in
                     board[row][col] in squares_seen[(row // 3, col // 3)]):
                     return False
-                # if not in any of the squares, rows, or columns, then add the number into the entry
-                # now if the same number
+                # each row, column, and square has its own set based on the index its at
+                # add the corresponding number to each entry
                 columns_seen[col].add(board[row][col])
                 rows_seen[row].add(board[row][col])
                 squares_seen[(row // 3, col // 3)].add(board[row][col])
