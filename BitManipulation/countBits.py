@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def countBits(self, n: int) -> List[int]:
         # creates a list of 0s length of n+1
